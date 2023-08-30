@@ -332,4 +332,4 @@ C {LS_FINAL.sym} -270 -900 0 0 {name=x1}
 C {LS_FINAL.sym} -270 -760 0 0 {name=x2}
 C {LS_FINAL.sym} -270 -620 0 0 {name=x3}
 C {LS_FINAL.sym} -270 -490 0 0 {name=x4}
-C {power_stage_v2.sym} 460 -590 0 0 {name=X5}
+C {power_stage.sym} 460 -590 0 0 {name=X5}
