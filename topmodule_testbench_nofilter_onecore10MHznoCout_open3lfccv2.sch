@@ -94,46 +94,46 @@ N -100 -940 -100 -920 {
 lab=VH_LS}
 N -120 -880 -80 -880 {
 lab=D1}
-N -900 -860 -900 -850 {
+N -1370 -870 -1370 -860 {
 lab=D1_s}
-N -900 -860 -890 -860 {
+N -1370 -870 -1360 -870 {
 lab=D1_s}
-N -900 -790 -900 -780 {
+N -1370 -800 -1370 -790 {
 lab=VSS}
-N -910 -780 -900 -780 {
+N -1380 -790 -1370 -790 {
 lab=VSS}
-N -900 -770 -900 -760 {
+N -1370 -780 -1370 -770 {
 lab=D2_s}
-N -900 -770 -890 -770 {
+N -1370 -780 -1360 -780 {
 lab=D2_s}
-N -900 -700 -900 -690 {
+N -1370 -710 -1370 -700 {
 lab=VSS}
-N -910 -690 -900 -690 {
+N -1380 -700 -1370 -700 {
 lab=VSS}
-N -900 -680 -900 -670 {
+N -1370 -690 -1370 -680 {
 lab=D2_N_s}
-N -900 -680 -890 -680 {
+N -1370 -690 -1360 -690 {
 lab=D2_N_s}
-N -900 -610 -900 -600 {
+N -1370 -620 -1370 -610 {
 lab=VSS}
-N -910 -600 -900 -600 {
+N -1380 -610 -1370 -610 {
 lab=VSS}
-N -900 -590 -900 -580 {
+N -1370 -600 -1370 -590 {
 lab=D1_N_s}
-N -900 -590 -890 -590 {
+N -1370 -600 -1360 -600 {
 lab=D1_N_s}
-N -900 -520 -900 -510 {
+N -1370 -530 -1370 -520 {
 lab=VSS}
-N -910 -510 -900 -510 {
+N -1380 -520 -1370 -520 {
 lab=VSS}
 N -450 -900 -420 -900 {
-lab=D1_s}
+lab=D1_}
 N -450 -760 -420 -760 {
-lab=D2_s}
+lab=D2_}
 N -450 -620 -420 -620 {
-lab=D2_N_s}
+lab=D3_}
 N -450 -490 -420 -490 {
-lab=D1_N_s}
+lab=D4_}
 N -460 -730 -420 -730 {
 lab=VSS}
 N -420 -740 -420 -730 {
@@ -155,6 +155,38 @@ lab=V_res}
 N 860 -1040 860 -990 { lab=VH}
 N 860 -930 860 -840 {
 lab=#net2}
+N -960 -870 -960 -860 {
+lab=D1_}
+N -960 -870 -950 -870 {
+lab=D1_}
+N -960 -800 -960 -790 {
+lab=VSS}
+N -970 -790 -960 -790 {
+lab=VSS}
+N -960 -780 -960 -770 {
+lab=D2_}
+N -960 -780 -950 -780 {
+lab=D2_}
+N -960 -710 -960 -700 {
+lab=VSS}
+N -970 -700 -960 -700 {
+lab=VSS}
+N -960 -690 -960 -680 {
+lab=D3_}
+N -960 -690 -950 -690 {
+lab=D3_}
+N -960 -620 -960 -610 {
+lab=VSS}
+N -970 -610 -960 -610 {
+lab=VSS}
+N -960 -600 -960 -590 {
+lab=D4_}
+N -960 -600 -950 -600 {
+lab=D4_}
+N -960 -530 -960 -520 {
+lab=VSS}
+N -970 -520 -960 -520 {
+lab=VSS}
 C {devices/vsource.sym} -830 -240 0 0 {name=V2 value=0}
 C {devices/gnd.sym} -830 -190 0 0 {name=l9 lab=GND}
 C {devices/code_shown.sym} -850 -80 0 0 {name=s1 only_toplevel=false value="
@@ -259,41 +291,41 @@ C {devices/lab_wire.sym} 1040 -800 0 1 {name=l29 sig_type=std_logic lab=VOUT_COR
 C {devices/lab_wire.sym} 890 -760 2 0 {name=l33 sig_type=std_logic lab=VSS}
 C {sky130_fd_pr/cap_mim_m3_2.sym} 560 -610 0 0 {name=C5 model=cap_mim_m3_2 W=15 L=30 MF=1978 spiceprefix=X}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 660 -550 0 0 {name=C6 model=cap_mim_m3_1 W=15 L=30 MF=1978 spiceprefix=X}
-C {devices/lab_pin.sym} -450 -490 2 1 {name=l14 sig_type=std_logic lab=D1_N_s
+C {devices/lab_pin.sym} -450 -490 2 1 {name=l14 sig_type=std_logic lab=D4_
 }
 C {devices/lab_wire.sym} -450 -510 0 0 {name=l24 sig_type=std_logic lab=VDIG}
-C {devices/lab_pin.sym} -450 -620 2 1 {name=l4 sig_type=std_logic lab=D2_N_s
+C {devices/lab_pin.sym} -450 -620 2 1 {name=l4 sig_type=std_logic lab=D3_
 }
 C {devices/lab_wire.sym} -450 -640 0 0 {name=l5 sig_type=std_logic lab=VDIG}
 C {devices/lab_pin.sym} -80 -470 0 1 {name=l6 sig_type=std_logic lab=D1_N
 }
 C {devices/lab_pin.sym} -80 -600 0 1 {name=l44 sig_type=std_logic lab=D2_N
 }
-C {devices/lab_pin.sym} -450 -760 2 1 {name=l7 sig_type=std_logic lab=D2_s
+C {devices/lab_pin.sym} -450 -760 2 1 {name=l7 sig_type=std_logic lab=D2_
 }
 C {devices/lab_pin.sym} -80 -740 0 1 {name=l8 sig_type=std_logic lab=D2
 }
-C {devices/lab_pin.sym} -450 -900 2 1 {name=l9 sig_type=std_logic lab=D1_s
+C {devices/lab_pin.sym} -450 -900 2 1 {name=l9 sig_type=std_logic lab=D1_
 }
 C {devices/lab_wire.sym} -450 -920 0 0 {name=l11 sig_type=std_logic lab=VDIG}
 C {devices/lab_pin.sym} -100 -940 0 1 {name=l125 sig_type=std_logic lab=VH_LS
 }
 C {devices/lab_pin.sym} -80 -880 0 1 {name=l12 sig_type=std_logic lab=D1
 }
-C {devices/lab_wire.sym} -890 -860 0 1 {name=l13 sig_type=std_logic lab=D1_s}
-C {devices/vsource.sym} -900 -640 0 0 {name=V12 value="PULSE(0 1.8 16.6n 1n 1n 31.6n 100n)"}
-C {devices/vsource.sym} -900 -730 0 0 {name=V13 value="PULSE(0 1.8 15.6n 1n 1n 33.3n 100n)"}
-C {devices/lab_wire.sym} -890 -770 0 1 {name=l43 sig_type=std_logic lab=D2_s}
-C {devices/lab_pin.sym} -890 -680 0 1 {name=l15 sig_type=std_logic lab=D2_N_s
+C {devices/lab_wire.sym} -1360 -870 0 1 {name=l13 sig_type=std_logic lab=D1_s}
+C {devices/vsource.sym} -1370 -650 0 0 {name=V12 value="PULSE(0 1.8 16.6n 1n 1n 31.6n 100n)"}
+C {devices/vsource.sym} -1370 -740 0 0 {name=V13 value="PULSE(0 1.8 15.6n 1n 1n 33.3n 100n)"}
+C {devices/lab_wire.sym} -1360 -780 0 1 {name=l43 sig_type=std_logic lab=D2_s}
+C {devices/lab_pin.sym} -1360 -690 0 1 {name=l15 sig_type=std_logic lab=D2_N_s
 }
-C {devices/vsource.sym} -900 -550 0 0 {name=V14 value="PULSE(0 1.8 65.6n 1n 1n 33.3n 100n)"}
-C {devices/lab_pin.sym} -890 -590 0 1 {name=l16 sig_type=std_logic lab=D1_N_s
+C {devices/vsource.sym} -1370 -560 0 0 {name=V14 value="PULSE(0 1.8 65.6n 1n 1n 33.3n 100n)"}
+C {devices/lab_pin.sym} -1360 -600 0 1 {name=l16 sig_type=std_logic lab=D1_N_s
 }
-C {devices/lab_wire.sym} -910 -510 0 0 {name=l45 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} -910 -780 0 0 {name=l17 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} -910 -690 0 0 {name=l19 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} -910 -600 0 0 {name=l21 sig_type=std_logic lab=VSS}
-C {devices/vsource.sym} -900 -820 0 0 {name=V15 value="PULSE(0 1.8 64.7n 1n 1n 35.4n 100n)"}
+C {devices/lab_wire.sym} -1380 -520 0 0 {name=l45 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} -1380 -790 0 0 {name=l17 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} -1380 -700 0 0 {name=l19 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} -1380 -610 0 0 {name=l21 sig_type=std_logic lab=VSS}
+C {devices/vsource.sym} -1370 -830 0 0 {name=V15 value="PULSE(0 1.8 64.7n 1n 1n 35.4n 100n)"}
 C {devices/lab_wire.sym} -450 -780 0 0 {name=l22 sig_type=std_logic lab=VDIG}
 C {devices/lab_wire.sym} -460 -870 0 0 {name=l23 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} -460 -590 0 0 {name=l30 sig_type=std_logic lab=VSS}
@@ -317,3 +349,17 @@ C {LS_FINAL.sym} -270 -760 0 0 {name=x2}
 C {LS_FINAL.sym} -270 -620 0 0 {name=x3}
 C {LS_FINAL.sym} -270 -490 0 0 {name=x4}
 C {power_stage.sym} 460 -590 0 0 {name=X5}
+C {devices/lab_wire.sym} -950 -870 0 1 {name=l2 sig_type=std_logic lab=D1_}
+C {devices/vsource.sym} -960 -650 0 0 {name=V1 value="PULSE(0 1.8 52.0n 1n 1n 30.0n 100.0n)"}
+C {devices/vsource.sym} -960 -740 0 0 {name=V5 value="PULSE(0 1.8 50.0n 1n 1n 34.0n 100.0n)"}
+C {devices/lab_wire.sym} -950 -780 0 1 {name=l3 sig_type=std_logic lab=D2_}
+C {devices/lab_pin.sym} -950 -690 0 1 {name=l32 sig_type=std_logic lab=D3_
+}
+C {devices/vsource.sym} -960 -560 0 0 {name=V6 value="PULSE(0 1.8 2.0n 1n 1n 30.0n 100.0n)"}
+C {devices/lab_pin.sym} -950 -600 0 1 {name=l37 sig_type=std_logic lab=D4_
+}
+C {devices/lab_wire.sym} -970 -520 0 0 {name=l38 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} -970 -790 0 0 {name=l40 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} -970 -700 0 0 {name=l41 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} -970 -610 0 0 {name=l42 sig_type=std_logic lab=VSS}
+C {devices/vsource.sym} -960 -830 0 0 {name=V7 value="PULSE(0 1.8 0n 1n 1n 34.0n 100.0n)"}
