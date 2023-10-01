@@ -28,26 +28,26 @@ N 3030 -3610 3030 -3590 { lab=vdd}
 N 2800 -3620 2800 -3600 { lab=en}
 N 2800 -3540 2800 -3510 { lab=GND}
 N 3030 -3750 3030 -3610 { lab=vdd}
-N 3380 -3480 3380 -3460 { lab=#net2}
-N 3380 -3310 3380 -3290 { lab=#net3}
-N 3380 -3400 3380 -3390 { lab=#net4}
-N 3380 -3330 3380 -3320 { lab=#net3}
-N 3400 -3410 3400 -3360 { lab=GND}
-N 3400 -3430 3400 -3410 { lab=GND}
-N 3380 -3320 3380 -3310 { lab=#net3}
-N 3380 -3230 3380 -3220 { lab=#net5}
-N 3400 -3260 3400 -3190 { lab=GND}
-N 3400 -3190 3400 -3160 { lab=GND}
-N 3390 -3160 3400 -3160 { lab=GND}
-N 3380 -3160 3390 -3160 { lab=GND}
-N 3380 -3160 3380 -3150 { lab=GND}
-N 3400 -3350 3400 -3260 { lab=GND}
-N 3400 -3360 3400 -3350 { lab=GND}
-N 3380 -3160 3380 -3120 { lab=GND}
-N 3380 -3120 3380 -3110 { lab=GND}
-N 3160 -3400 3160 -3360 { lab=GND}
-N 3160 -3480 3160 -3460 { lab=#net2}
-N 3160 -3480 3380 -3480 {
+N 3230 -3300 3230 -3280 { lab=#net2}
+N 3230 -3130 3230 -3110 { lab=#net3}
+N 3230 -3220 3230 -3210 { lab=#net4}
+N 3230 -3150 3230 -3140 { lab=#net3}
+N 3250 -3230 3250 -3180 { lab=GND}
+N 3250 -3250 3250 -3230 { lab=GND}
+N 3230 -3140 3230 -3130 { lab=#net3}
+N 3230 -3050 3230 -3040 { lab=#net5}
+N 3250 -3080 3250 -3010 { lab=GND}
+N 3250 -3010 3250 -2980 { lab=GND}
+N 3240 -2980 3250 -2980 { lab=GND}
+N 3230 -2980 3240 -2980 { lab=GND}
+N 3230 -2980 3230 -2970 { lab=GND}
+N 3250 -3170 3250 -3080 { lab=GND}
+N 3250 -3180 3250 -3170 { lab=GND}
+N 3230 -2980 3230 -2940 { lab=GND}
+N 3230 -2940 3230 -2930 { lab=GND}
+N 3010 -3220 3010 -3180 { lab=GND}
+N 3010 -3300 3010 -3280 { lab=#net2}
+N 3010 -3300 3230 -3300 {
 lab=#net2}
 N 4230 -3630 4230 -3520 {
 lab=pos}
@@ -70,7 +70,7 @@ lab=GND}
 N 3850 -3930 3850 -3870 {
 lab=vdd}
 N 4010 -3510 4010 -3470 {
-lab=#net6}
+lab=vb}
 C {bgr2.sym} 2150 -2100 0 0 {name=xb2}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 4210 -3760 0 0 {name=M24
 L=0.5
@@ -136,12 +136,14 @@ define min(vector_name) (vecmin(vector_name))
 
 *Temp_sweep
 .control
+save v(xb2.mir)
 alter IL 0
 dc temp 85 0 -1
 let temp_coeff=1000000*(max(ldo_out)-min(ldo_out))/85
 print temp_coeff
 plot v(ldo_out)
 plot i(vs1)
+plot v(xb2.mir)
 set wr_singlescale
 set wr_vecnames
 set appendwrite
@@ -283,33 +285,33 @@ plot ven ldo_out
 C {devices/lab_pin.sym} 3410 -3750 0 0 {name=l9 sig_type=std_logic lab=en}
 C {devices/lab_pin.sym} 3030 -3750 0 0 {name=l6 sig_type=std_logic lab=vdd}
 C {devices/lab_pin.sym} 3510 -3930 0 0 {name=l8 sig_type=std_logic lab=vdd}
-C {sky130_fd_pr/res_xhigh_po_0p69.sym} 3380 -3360 0 1 {name=R5
+C {sky130_fd_pr/res_xhigh_po_0p69.sym} 3230 -3180 0 1 {name=R5
 W=0.69
 L=24
 model=res_xhigh_po_0p69
 spiceprefix=X
 mult=3}
-C {sky130_fd_pr/res_xhigh_po_0p69.sym} 3380 -3430 0 1 {name=R6
+C {sky130_fd_pr/res_xhigh_po_0p69.sym} 3230 -3250 0 1 {name=R6
 W=0.69
 L=24
 model=res_xhigh_po_0p69
 spiceprefix=X
 mult=8}
-C {sky130_fd_pr/res_xhigh_po_0p69.sym} 3380 -3260 0 1 {name=R7
+C {sky130_fd_pr/res_xhigh_po_0p69.sym} 3230 -3080 0 1 {name=R7
 W=0.69
 L=24
 model=res_xhigh_po_0p69
 spiceprefix=X
 mult=2}
-C {sky130_fd_pr/res_xhigh_po_0p69.sym} 3380 -3190 0 1 {name=R8
+C {sky130_fd_pr/res_xhigh_po_0p69.sym} 3230 -3010 0 1 {name=R8
 W=0.69
 L=24
 model=res_xhigh_po_0p69
 spiceprefix=X
 mult=4}
-C {devices/gnd.sym} 3380 -3110 0 0 {name=l7 lab=GND}
-C {devices/vsource.sym} 3160 -3430 0 0 {name=Vs1 value=1}
-C {devices/gnd.sym} 3160 -3360 0 0 {name=l10 lab=GND}
+C {devices/gnd.sym} 3230 -2930 0 0 {name=l7 lab=GND}
+C {devices/vsource.sym} 3010 -3250 0 0 {name=Vs1 value=1}
+C {devices/gnd.sym} 3010 -3180 0 0 {name=l10 lab=GND}
 C {devices/res.sym} 4230 -3660 0 0 {name=RD2
 value=60e3
 footprint=1206

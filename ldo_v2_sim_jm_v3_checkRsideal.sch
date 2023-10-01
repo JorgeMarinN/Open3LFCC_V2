@@ -70,7 +70,7 @@ lab=GND}
 N 3850 -3930 3850 -3870 {
 lab=vdd}
 N 4010 -3510 4010 -3470 {
-lab=vb}
+lab=#net7}
 N 3710 -3570 3710 -3530 { lab=GND}
 N 3710 -3650 3710 -3630 { lab=#net6}
 C {bgr2.sym} 2150 -2100 0 0 {name=xb2}
@@ -144,6 +144,7 @@ let temp_coeff=1000000*(max(ldo_out)-min(ldo_out))/85
 print temp_coeff
 plot v(ldo_out)
 plot i(vs1)
+plot i(Vbias_ota)
 set wr_singlescale
 set wr_vecnames
 set appendwrite
@@ -326,6 +327,7 @@ C {devices/lab_pin.sym} 3620 -3780 2 0 {name=l12 sig_type=std_logic lab=neg}
 C {devices/lab_pin.sym} 3620 -3720 2 0 {name=l11 sig_type=std_logic lab=vb}
 C {/foss/designs/Open3LFCC_V2/OTA_erroramp_jm.sym} 3910 -3690 0 0 {name=x1}
 C {devices/lab_pin.sym} 3710 -3730 0 0 {name=l13 sig_type=std_logic lab=pos}
-C {devices/lab_pin.sym} 4010 -3470 0 0 {name=l15 sig_type=std_logic lab=vb}
+C {devices/lab_pin.sym} 4010 -3410 0 0 {name=l15 sig_type=std_logic lab=vb}
 C {devices/vsource.sym} 3710 -3600 0 0 {name=Vs2 value=1.2}
 C {devices/gnd.sym} 3710 -3530 0 0 {name=l16 lab=GND}
+C {devices/vsource.sym} 4010 -3440 0 0 {name=Vbias_ota value=0}

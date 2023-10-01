@@ -29,7 +29,7 @@ N 4370 -3910 4370 -3860 { lab=vb}
 N 4370 -3760 4370 -3690 { lab=GND}
 C {bgr2.sym} 2740 -2580 0 0 {name=xb2}
 C {devices/gnd.sym} 4100 -4130 0 0 {name=l3 lab=GND}
-C {devices/vsource.sym} 3620 -4040 0 0 {name=Vs value=3.5}
+C {devices/vsource.sym} 3620 -4040 0 0 {name=Vs value=3.2}
 C {devices/vsource.sym} 3390 -4050 0 0 {name=Ven value=3.5}
 C {devices/lab_pin.sym} 3390 -4100 0 0 {name=l27 sig_type=std_logic lab=en}
 C {devices/gnd.sym} 3620 -3970 0 0 {name=l4 lab=GND}

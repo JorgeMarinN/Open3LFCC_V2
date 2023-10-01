@@ -137,12 +137,14 @@ define min(vector_name) (vecmin(vector_name))
 
 *Temp_sweep
 .control
+save v(xb2.mir)
 alter IL 0
 dc temp 85 0 -1
 let temp_coeff=1000000*(max(ldo_out)-min(ldo_out))/85
 print temp_coeff
 plot v(ldo_out)
 plot i(vs1)
+plot v(xb2.mir)
 set wr_singlescale
 set wr_vecnames
 set appendwrite
